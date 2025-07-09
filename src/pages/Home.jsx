@@ -87,7 +87,7 @@ const Home = () => {
           <InfoCard
             icon={Briefcase}
             title="Experience"
-            description="3 year of experience in web development, working in internship programs and startups to deliver high-quality products."
+            description="3 year of experience in web development, working as an individual  programmer to deliver high-quality products."
           />
           <InfoCard
             icon={GraduationCap}

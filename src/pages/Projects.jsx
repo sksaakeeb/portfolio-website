@@ -19,7 +19,7 @@ const projectsData = {
         "Matter JS",
       ],
       future: ["Foot fall", "Google Analytics"],
-      git: "https://github.com/sksaakeeb/portfolio-website",
+      git: "#",
       live: "https://sksakib-portfolio.vercel.app",
     },
     {

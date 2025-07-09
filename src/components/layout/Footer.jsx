@@ -6,7 +6,7 @@ const Footer = () => {
     { icon: Github, href: "https://github.com/sksaakeeb" },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/sksaakeeb",
+      href: "https://www.linkedin.com/in/sk-sakib",
     },
     { icon: Mail, href: "mailto:sksakib066@gmail.com" },
     {
