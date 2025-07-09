@@ -5,10 +5,9 @@ import { useTheme } from "@/contexts/ThemeContext";
 import {
   Sun,
   Moon,
-  Cloud,
+  CloudDrizzle,
   Snowflake,
   Leaf,
-  Zap,
   Menu,
   X,
   Download,
@@ -33,8 +32,8 @@ const Header = () => {
     try {
       // Create a link element
       const link = document.createElement("a");
-      link.href = "/SyedMdFarhanEAzam.pdf";
-      link.download = "SyedMdFarhanEAzam.pdf";
+      link.href = "/my-pdf.pdf";
+      link.download = "my-pdf.pdf";
       link.target = "_blank";
 
       document.body.appendChild(link);
@@ -65,9 +64,8 @@ const Header = () => {
   ];
 
   const weatherOptions = [
-    { name: "clear", icon: Zap },
     { name: "snow", icon: Snowflake },
-    { name: "rain", icon: Cloud },
+    { name: "rain", icon: CloudDrizzle },
     { name: "autumn", icon: Leaf },
   ];
 
@@ -81,7 +79,9 @@ const Header = () => {
 
   return (
     <motion.header
-      className={`fixed top-0 inset-x-0 z-[100] transition-all duration-300 ${isScrolled ? "py-2" : "py-4"}`}
+      className={`fixed top-0 inset-x-0 z-[100] transition-all duration-300 ${
+        isScrolled ? "py-2" : "py-4"
+      }`}
       initial={{ y: -100, opacity: 1 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.6, 0.01, -0.05, 0.95] }}
@@ -93,7 +93,7 @@ const Header = () => {
             className="text-lg sm:text-xl font-bold text-primary text-glow pl-2"
             onClick={closeMobileMenu}
           >
-            AZAM
+            SAKIB<strong>.</strong>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

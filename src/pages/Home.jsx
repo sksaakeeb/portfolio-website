@@ -16,9 +16,11 @@ const Home = () => {
       <section className="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center text-center overflow-visible rounded-3xl">
         <div className="absolute inset-0 z-0">
           <img
-            className="w-full h-full object-cover"
+            className="w-full h-full or"
             alt="A portrait of me"
-            src="/myPics.png"
+            src="/my-image.svg"
+            height={50}
+            width={50}
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/10 to-transparent"></div>
         </div>
@@ -29,7 +31,7 @@ const Home = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <AnimatedText
-            text="Hi, I'm Syed Md Farhan E Azam"
+            text="Hi, I'm Sk Sakib"
             as="h1"
             className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 text-glow px-4"
           />
@@ -85,12 +87,12 @@ const Home = () => {
           <InfoCard
             icon={Briefcase}
             title="Experience"
-            description="1 year of experience in web development, working in internship programs and startups to deliver high-quality products."
+            description="3 year of experience in web development, working in internship programs and startups to deliver high-quality products."
           />
           <InfoCard
             icon={GraduationCap}
             title="Education"
-            description="Persuing Bachelor's Degree in Computer Science from Narula Institute Of Technology. Focused on software engineering and AI."
+            description="Persuing Bachelor's Degree in Computer Science and Engineering from Hooghly Enginerring & Technology College. Focused on software engineering and AI."
           />
           <InfoCard
             icon={UserCheck}

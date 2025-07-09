@@ -19,112 +19,22 @@ const projectsData = {
         "Matter JS",
       ],
       future: ["Foot fall", "Google Analytics"],
-      git: "https://github.com/syedmdfarhaneazam/MyPortfolio",
-      live: "#",
+      git: "https://github.com/sksaakeeb/portfolio-website",
+      live: "https://sksakib-portfolio.vercel.app",
     },
     {
-      title: "Advanced Notes Master",
+      title: "Smart Expense Tracker",
       description:
-        "A full-Customizable online storage of notes , with coding windows , auto indentation , auto formating , hovering PIP display to write your notes while staying full screen on your lecture.",
+        "The Expense Tracker App is a powerful and easy-to-use web application that helps users manage their income and expenses with clarity and confidence.",
       pros: [
-        "16 Themes",
-        "32 Font Colors",
-        "Coding windows",
-        "Import / Export",
-        "Secure",
-        "Picture in Picture",
+        "Real-time balance",
+        "Transactions",
+        "Authentication",
+        "Cloud-based data",
       ],
-      future: [
-        "LLM integration",
-        "Audio-to-Text",
-        "Activity dashboard",
-        "Compete window",
-      ],
-      git: "https://github.com/syedmdfarhaneazam/myNotes",
-      live: "https://my-notes-three-flax.vercel.app/",
-    },
-    {
-      title: "Study Portal",
-      description:
-        "A platform for Teachers and Students to share and manage tasks and reminders for events.",
-      pros: [
-        "Role Based",
-        "Add Tasks",
-        "Add Reminders",
-        "Active User List",
-        "JWT-Secure",
-        "NodeMailer",
-      ],
-      future: ["Live chat", "Notifications", "Better UI", "Theme Support"],
-      git: "https://github.com/syedmdfarhaneazam/studyPortal",
-      live: "https://github.com/syedmdfarhaneazam/studyPortal",
-    },
-    {
-      title: "Quiz Template",
-      description:
-        "A simple quiz template with interactive background and timmer for a fair quiz.",
-      pros: [
-        "Interactive",
-        "User Friendly",
-        "Good for A quick Quiz",
-        "Result Display",
-        "Chart",
-      ],
-      future: ["Import Question", "Reporting", "Theme Support", "More Routes"],
-    },
-    {
-      title: "Challenge Tracker",
-      description:
-        "ChallengeTracker helps you log, track, and analyze daily personal challenges, turning small efforts into big wins. Visualize progress, build habits, and uncover the value of your growth.",
-      pros: [
-        "Tracks And Stores",
-        "Automated email reminders",
-        "Framer Motion",
-        "Gsap",
-      ],
-      future: ["Tags for challenges", "Resource management", "Theme Support"],
-      git: "https://github.com/syedmdfarhaneazam/ChallengesTracker",
-      live: "https://challenges-tracker-ten.vercel.app/",
-    },
-  ],
-  python: [
-    {
-      title: "Snake Game",
-      description: "A app using Tkinter for basic python Game.",
-      pros: ["Easy To Use", "For learning", "Starters"],
-      future: ["Better Canvas", "Better UI", "Levels"],
-      git: "https://github.com/syedmdfarhaneazam/snakeFood",
-      live: "https://github.com/syedmdfarhaneazam/snakeFood",
-    },
-  ],
-  shell: [
-    {
-      title: "Advanced Calculator",
-      description:
-        "From the Ease of my WSL Terminal , I needed a calculator to save varibles as I calculate for future reference. Alighned to the needs of the students",
-      pros: [
-        "Cron job integration",
-        "All Scientific Functions",
-        "Interactive",
-        "Terminal Support",
-      ],
-      future: [
-        "Incremental backups",
-        "Cloud storage support",
-        "Auto Complete",
-        "Auto Suggestions",
-      ],
-      git: "https://github.com/syedmdfarhaneazam/AdavancedCalculator",
-      live: "https://github.com/syedmdfarhaneazam/AdavancedCalculator",
-    },
-  ],
-  java: [
-    {
-      title: "DSA Implementations",
-      description:
-        "A repo where I have stored my DSA solutions and integrations to showcase my understanding of Java.",
-      pros: ["Clean Module architecture", "Class Based", "Easy to Configure"],
-      future: ["Advanced Concepts", "Complex Algos"],
+      future: ["Activity dashboard", "Analytics", "Bar charts", "Graphs"],
+      git: "https://github.com/sksaakeeb/expense-tracker",
+      live: "https://expense-tracker-sakib-khaki.vercel.app/",
     },
   ],
 };
@@ -223,7 +133,7 @@ const Projects = () => {
 
       <div className="text-center my-8 sm:my-12">
         <a
-          href="https://github.com/syedmdfarhaneazam/"
+          href="https://github.com/sksaakeeb/"
           target="_blank"
           rel="noreferrer"
         >
@@ -231,24 +141,6 @@ const Projects = () => {
             And More...
           </motion.button>
         </a>
-      </div>
-
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6">
-        <ProjectSection
-          title="Python"
-          projects={projectsData.python}
-          singleColumn
-        />
-        <ProjectSection
-          title="Shell Scripting"
-          projects={projectsData.shell}
-          singleColumn
-        />
-        <ProjectSection
-          title="Java"
-          projects={projectsData.java}
-          singleColumn
-        />
       </div>
     </PageWrapper>
   );
@@ -262,7 +154,11 @@ const ProjectSection = ({ title, projects, singleColumn = false }) => (
       className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 text-primary"
     />
     <div
-      className={`grid gap-6 sm:gap-8 ${singleColumn ? "grid-cols-1" : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}`}
+      className={`grid gap-6 sm:gap-8 ${
+        singleColumn
+          ? "grid-cols-1"
+          : "grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+      }`}
     >
       {projects.map((p, i) => (
         <ProjectCard key={i} {...p} />

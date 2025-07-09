@@ -3,17 +3,17 @@ import { Github, Linkedin, Mail, Instagram, Code } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: Github, href: "https://github.com/syedmdfarhaneazam" },
+    { icon: Github, href: "https://github.com/sksaakeeb" },
     {
       icon: Linkedin,
-      href: "https://www.linkedin.com/in/syed-md-farhan-e-azam/",
+      href: "https://www.linkedin.com/in/sksaakeeb",
     },
-    { icon: Mail, href: "mailto:syedmdfarhaneazam@gmail.com" },
+    { icon: Mail, href: "mailto:sksakib066@gmail.com" },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/syed_md_farhan_e_azam/",
+      href: "https://www.instagram.com/sksaakeeb"
     },
-    { icon: Code, href: "https://leetcode.com/u/SYED_MD_FARHAN_E_AZAM/" },
+    { icon: Code, href: "https://leetcode.com/u/SKSAAKEEB" },
   ];
 
   return (
@@ -33,7 +33,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-sm text-foreground/70">
-          &copy; {new Date().getFullYear()} Syed Md Farhan E Azam. All Rights
+          &copy; {new Date().getFullYear()} Sk Sakib. All Rights
           Reserved.
         </p>
       </div>

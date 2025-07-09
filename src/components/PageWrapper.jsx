@@ -26,7 +26,7 @@ const PageWrapper = ({ children, title, description }) => {
   return (
     <>
       <Helmet>
-        <title>{`${title} | AZAM`}</title>
+        <title>{`${title} | Sk Sakib`}</title>
         <meta name="description" content={description} />
       </Helmet>
       <motion.div
