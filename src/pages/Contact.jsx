@@ -21,8 +21,8 @@ const contactLinks = [
   {
     name: "LinkedIn",
     icon: Linkedin,
-    user: "sksaakeeb",
-    url: "https://www.linkedin.com/in/sksaakeeb",
+    user: "sk-sakib",
+    url: "https://www.linkedin.com/in/sk-sakib",
     color: "bg-[#0077b5]",
   },
   {

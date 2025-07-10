@@ -92,7 +92,7 @@ const Home = () => {
           <InfoCard
             icon={GraduationCap}
             title="Education"
-            description="Persuing Bachelor's Degree in Computer Science and Engineering from Hooghly Enginerring & Technology College. Focused on software engineering and AI."
+            description="Persuing Bachelor's Degree in Computer Science and Engineering from Hooghly Engineering & Technology College. Focused on software engineering and AI."
           />
           <InfoCard
             icon={UserCheck}
