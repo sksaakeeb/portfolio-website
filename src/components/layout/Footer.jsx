@@ -11,7 +11,7 @@ const Footer = () => {
     { icon: Mail, href: "mailto:sksakib066@gmail.com" },
     {
       icon: Instagram,
-      href: "https://www.instagram.com/sksaakeeb"
+      href: "https://www.instagram.com/sksaakeeb",
     },
     { icon: Code, href: "https://leetcode.com/u/SKSAAKEEB" },
   ];
@@ -33,8 +33,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-sm text-foreground/70">
-          &copy; {new Date().getFullYear()} Sk Sakib. All Rights
-          Reserved.
+          &copy; {new Date().getFullYear()} Sk Sakib. All Rights Reserved.
         </p>
       </div>
     </footer>

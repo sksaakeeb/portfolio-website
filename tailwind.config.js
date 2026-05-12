@@ -2,10 +2,10 @@
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{js,jsx}',
-    './components/**/*.{js,jsx}',
-    './app/**/*.{js,jsx}',
-    './src/**/*.{js,jsx}',
+    "./pages/**/*.{js,jsx}",
+    "./components/**/*.{js,jsx}",
+    "./app/**/*.{js,jsx}",
+    "./src/**/*.{js,jsx}",
   ],
   theme: {
     container: {
@@ -20,8 +20,8 @@ module.exports = {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
@@ -65,30 +65,30 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: 0 },
         },
-        "snow": {
-          '0%': { transform: 'translateY(-10vh)' },
-          '100%': { transform: 'translateY(110vh)' }
+        snow: {
+          "0%": { transform: "translateY(-10vh)" },
+          "100%": { transform: "translateY(110vh)" },
         },
-        "rain": {
-          '0%': { transform: 'translateY(-10vh)' },
-          '100%': { transform: 'translateY(120vh)' }
+        rain: {
+          "0%": { transform: "translateY(-10vh)" },
+          "100%": { transform: "translateY(120vh)" },
         },
-        "autumn": {
-          '0%': { transform: 'translateY(-10vh) rotate(0deg)' },
-          '100%': { transform: 'translateY(110vh) rotate(720deg)' }
-        }
+        autumn: {
+          "0%": { transform: "translateY(-10vh) rotate(0deg)" },
+          "100%": { transform: "translateY(110vh) rotate(720deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "snow": "snow 20s linear infinite",
-        "rain": "rain 1s linear infinite",
-        "autumn": "autumn 15s linear infinite",
+        snow: "snow 20s linear infinite",
+        rain: "rain 1s linear infinite",
+        autumn: "autumn 15s linear infinite",
       },
       backdropBlur: {
-        'xs': '2px',
-      }
+        xs: "2px",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};

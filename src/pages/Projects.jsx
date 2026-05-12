@@ -7,20 +7,20 @@ import { useToast } from "@/components/ui/use-toast";
 const projectsData = {
   mern: [
     {
-      title: "Personal Portfolio",
+      title: "AI-Powered Content Generator",
       description:
-        "My personal portfolio that your are currently on , with weather like theme and some UI algorithms , Play arround and enjoy.",
+        "An AI-powered content generation platform built using Gemini API that creates high-quality text content in real time with a modern, responsive UI and smooth user experience.",
       pros: [
-        "Weather support",
+        "Gemini API Integration",
+        "Real-time Content Generation",
+        "Responsive UI",
         "Text Animation",
-        "GSAP",
         "Framer Motion",
-        "Canvas JS",
-        "Matter JS",
+        "Modern User Experience",
       ],
-      future: ["Foot fall", "Google Analytics"],
-      git: "https://github.com/sksaakeeb/portfolio-website",
-      live: "https://sksakib-portfolio.vercel.app",
+      future: ["Multi-language Support", "Content History", "Google Analytics"],
+      git: "https://github.com/sksaakeeb/ai-content-generator",
+      live: "https://ai-content-gen-lovat.vercel.app",
     },
     {
       title: "Smart Expense Tracker",
@@ -35,6 +35,22 @@ const projectsData = {
       future: ["Activity dashboard", "Analytics", "Bar charts", "Graphs"],
       git: "https://github.com/sksaakeeb/expense-tracker",
       live: "https://expense-tracker-sakib-khaki.vercel.app/",
+    },
+    {
+      title: "Personal Portfolio",
+      description:
+        "My personal portfolio that your are currently on , with weather like theme and some UI algorithms , Play arround and enjoy.",
+      pros: [
+        "Weather support",
+        "Text Animation",
+        "GSAP",
+        "Framer Motion",
+        "Canvas JS",
+        "Matter JS",
+      ],
+      future: ["Foot fall", "Google Analytics"],
+      git: "https://github.com/sksaakeeb/portfolio-website",
+      live: "https://sksakib-portfolio.vercel.app",
     },
   ],
 };

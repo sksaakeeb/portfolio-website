@@ -93,7 +93,7 @@ const Header = () => {
             className="text-lg sm:text-xl font-bold text-primary text-glow pl-2"
             onClick={closeMobileMenu}
           >
-            SAKIB<strong>.</strong>
+            SK <strong>SAKIB</strong>
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">

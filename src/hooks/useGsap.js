@@ -1,6 +1,5 @@
-
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export const useGsapTextReveal = (deps = []) => {
   const ref = useRef(null);
@@ -16,12 +15,12 @@ export const useGsapTextReveal = (deps = []) => {
           opacity: 1,
           stagger: 0.05,
           duration: 1,
-          ease: 'power4.out',
+          ease: "power4.out",
           scrollTrigger: {
             trigger: ref.current,
-            start: 'top 80%',
+            start: "top 80%",
           },
-        }
+        },
       );
     }
   }, [ref, ...deps]);
@@ -30,25 +29,26 @@ export const useGsapTextReveal = (deps = []) => {
 };
 
 export const useGsapShutterReveal = (deps = []) => {
-    const ref = useRef(null);
+  const ref = useRef(null);
 
-    useEffect(() => {
-        if (ref.current) {
-            gsap.fromTo(ref.current, 
-                { scaleX: 0 }, 
-                { 
-                    scaleX: 1, 
-                    duration: 1.2, 
-                    ease: 'power4.inOut',
-                    transformOrigin: 'left',
-                    scrollTrigger: {
-                        trigger: ref.current,
-                        start: 'top 90%',
-                    }
-                }
-            );
-        }
-    }, [ref, ...deps]);
+  useEffect(() => {
+    if (ref.current) {
+      gsap.fromTo(
+        ref.current,
+        { scaleX: 0 },
+        {
+          scaleX: 1,
+          duration: 1.2,
+          ease: "power4.inOut",
+          transformOrigin: "left",
+          scrollTrigger: {
+            trigger: ref.current,
+            start: "top 90%",
+          },
+        },
+      );
+    }
+  }, [ref, ...deps]);
 
-    return ref;
+  return ref;
 };

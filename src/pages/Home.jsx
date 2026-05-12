@@ -38,7 +38,7 @@ const Home = () => {
           <AnimatedText
             text="A Creative Full-Stack Developer / Coding Enthusiast"
             as="h2"
-            className="text-lg sm:text-2xl md:text-3xl text-primary mb-8 font-mono text-purple-400 px-4"
+            className="text-lg sm:text-2xl md:text-3xl text-primary mb-8 font-mono text-red-400 px-4"
           />
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 px-4">
             <Link to="/projects">
@@ -47,7 +47,7 @@ const Home = () => {
                 whileTap={{ scale: 0.95 }}
                 className="btn-primary flex items-center gap-2 w-full sm:w-auto justify-center"
               >
-                <span>View My Projects </span>
+                <span>View My Projects</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.button>
             </Link>
@@ -87,7 +87,7 @@ const Home = () => {
           <InfoCard
             icon={Briefcase}
             title="Experience"
-            description="3 year of experience in web development, working as an individual  programmer to deliver high-quality products."
+            description="4 years+ of experience in web development, working as an individual  programmer to deliver high-quality products."
           />
           <InfoCard
             icon={GraduationCap}

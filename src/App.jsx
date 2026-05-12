@@ -1,16 +1,16 @@
-import React from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import WeatherOverlay from '@/components/layout/WeatherOverlay';
-import Home from '@/pages/Home';
-import Projects from '@/pages/Projects';
-import Skills from '@/pages/Skills';
-import Vision from '@/pages/Vision';
-import Contact from '@/pages/Contact';
-import Magics from '@/pages/Magics';
-import { Toaster } from '@/components/ui/toaster';
+import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import WeatherOverlay from "@/components/layout/WeatherOverlay";
+import Home from "@/pages/Home";
+import Projects from "@/pages/Projects";
+import Skills from "@/pages/Skills";
+import Vision from "@/pages/Vision";
+import Contact from "@/pages/Contact";
+import Magics from "@/pages/Magics";
+import { Toaster } from "@/components/ui/toaster";
 
 function App() {
   const location = useLocation();

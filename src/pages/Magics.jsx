@@ -101,4 +101,3 @@ const Magics = () => {
 };
 
 export default Magics;
-

@@ -1,15 +1,15 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 const RpsCanvas = () => {
   const canvasRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     let animationFrameId;
 
     const Types = { ROCK: 0, PAPER: 1, SCISSORS: 2 };
-    const typeColors = ['#ff4757', '#487eb0', '#2ed573']; // Red, Blue, Green
+    const typeColors = ["#ff4757", "#487eb0", "#2ed573"]; // Red, Blue, Green
 
     let agents = [];
     const numAgentsPerType = 50;
@@ -19,31 +19,31 @@ const RpsCanvas = () => {
 
     let worldWidth, worldHeight, offsetX, offsetY;
     let grid, cellSize;
-    
+
     const resizeCanvas = () => {
-        const parent = canvas.parentElement;
-        canvas.width = parent.offsetWidth;
-        canvas.height = parent.offsetHeight;
-        
-        worldWidth = canvas.width * 0.8;
-        worldHeight = canvas.height * 0.7;
-        offsetX = (canvas.width - worldWidth) / 2;
-        offsetY = (canvas.height - worldHeight) / 2;
-        
-        cellSize = radius * 2;
-        grid = new SpatialHash(worldWidth, worldHeight, cellSize);
-        
-        if (agents.length === 0) {
-            for (let i = 0; i < numAgentsPerType * 3; i++) {
-                const type = Math.floor(i / numAgentsPerType);
-                agents.push(createAgent(type));
-            }
-        } else {
-             agents.forEach(agent => {
-                agent.x = Math.random() * worldWidth;
-                agent.y = Math.random() * worldHeight;
-             });
+      const parent = canvas.parentElement;
+      canvas.width = parent.offsetWidth;
+      canvas.height = parent.offsetHeight;
+
+      worldWidth = canvas.width * 0.8;
+      worldHeight = canvas.height * 0.7;
+      offsetX = (canvas.width - worldWidth) / 2;
+      offsetY = (canvas.height - worldHeight) / 2;
+
+      cellSize = radius * 2;
+      grid = new SpatialHash(worldWidth, worldHeight, cellSize);
+
+      if (agents.length === 0) {
+        for (let i = 0; i < numAgentsPerType * 3; i++) {
+          const type = Math.floor(i / numAgentsPerType);
+          agents.push(createAgent(type));
         }
+      } else {
+        agents.forEach((agent) => {
+          agent.x = Math.random() * worldWidth;
+          agent.y = Math.random() * worldHeight;
+        });
+      }
     };
 
     class SpatialHash {
@@ -90,7 +90,7 @@ const RpsCanvas = () => {
         this.grid.clear();
       }
     }
-    
+
     function createAgent(type) {
       return {
         type: type,
@@ -102,9 +102,9 @@ const RpsCanvas = () => {
 
     function update() {
       grid.clear();
-      agents.forEach(agent => grid.insert(agent));
+      agents.forEach((agent) => grid.insert(agent));
 
-      agents.forEach(agent => {
+      agents.forEach((agent) => {
         if (Math.random() < turnProb) {
           agent.angle += (Math.random() - 0.5) * Math.PI;
         }
@@ -122,9 +122,11 @@ const RpsCanvas = () => {
           const distSq = dx * dx + dy * dy;
           if (distSq < (radius * 2) ** 2) {
             const winner = (agent.type - other.type + 3) % 3;
-            if (winner === 1) { // agent wins
+            if (winner === 1) {
+              // agent wins
               other.type = agent.type;
-            } else if (winner === 2) { // other wins
+            } else if (winner === 2) {
+              // other wins
               agent.type = other.type;
             }
           }
@@ -134,21 +136,24 @@ const RpsCanvas = () => {
 
     function draw() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-      ctx.strokeStyle = 'hsl(var(--primary) / 0.3)';
+      ctx.strokeStyle = "hsl(var(--primary) / 0.3)";
       ctx.strokeRect(offsetX, offsetY, worldWidth, worldHeight);
 
-      agents.forEach(agent => {
+      agents.forEach((agent) => {
         ctx.fillStyle = typeColors[agent.type];
         ctx.beginPath();
         ctx.arc(offsetX + agent.x, offsetY + agent.y, radius, 0, 2 * Math.PI);
         ctx.fill();
       });
 
-      const counts = agents.reduce((acc, agent) => {
-        acc[agent.type]++;
-        return acc;
-      }, [0, 0, 0]);
-      
+      const counts = agents.reduce(
+        (acc, agent) => {
+          acc[agent.type]++;
+          return acc;
+        },
+        [0, 0, 0],
+      );
+
       ctx.fillStyle = typeColors[Types.ROCK];
       ctx.fillText(`Rock: ${counts[Types.ROCK]}`, 10, 20);
       ctx.fillStyle = typeColors[Types.PAPER];
@@ -156,7 +161,7 @@ const RpsCanvas = () => {
       ctx.fillStyle = typeColors[Types.SCISSORS];
       ctx.fillText(`Scissors: ${counts[Types.SCISSORS]}`, 10, 60);
     }
-    
+
     function animate() {
       update();
       draw();
@@ -165,11 +170,11 @@ const RpsCanvas = () => {
 
     resizeCanvas();
     animate();
-    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener("resize", resizeCanvas);
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener("resize", resizeCanvas);
     };
   }, []);
 

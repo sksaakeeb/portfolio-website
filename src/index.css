@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Roboto+Mono:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -49,7 +49,7 @@
     --input: 240 3.7% 15.9%;
     --ring: 262.1 83.3% 57.8%;
   }
-  
+
   :root.light {
     --background: 0 0% 98%;
     --foreground: 240 10% 3.9%;
@@ -79,34 +79,36 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 }
 
 .text-glow {
-  text-shadow: 0 0 10px hsl(var(--primary) / 0.6), 0 0 24px hsl(var(--primary) / 0.4);
+  text-shadow:
+    0 0 10px hsl(var(--primary) / 0.6),
+    0 0 24px hsl(var(--primary) / 0.4);
 }
 
 .btn-primary {
-    @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/20 hover:shadow-primary/40;
+  @apply bg-primary text-primary-foreground font-semibold px-6 py-3 rounded-full hover:bg-primary/90 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-primary/20 hover:shadow-primary/40;
 }
 
 .btn-secondary {
-    @apply bg-secondary text-secondary-foreground font-semibold px-6 py-3 rounded-full hover:bg-secondary/80 transition-all duration-300 transform hover:scale-105;
+  @apply bg-secondary text-secondary-foreground font-semibold px-6 py-3 rounded-full hover:bg-secondary/80 transition-all duration-300 transform hover:scale-105;
 }
 
 .btn-magic {
-    @apply relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50;
+  @apply relative inline-flex h-12 overflow-hidden rounded-full p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50;
 }
 
 .btn-magic-span {
-    @apply absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]
+  @apply absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)];
 }
 
 .btn-magic-inner {
-    @apply inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-background px-6 font-medium text-foreground backdrop-blur-3xl;
+  @apply inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-background px-6 font-medium text-foreground backdrop-blur-3xl;
 }
 
 @keyframes move-bg {
@@ -120,14 +122,20 @@
 }
 
 .animated-border-box::before {
-  content: '';
+  content: "";
   @apply absolute -top-1/2 -left-1/2 w-[200%] h-[200%] bg-no-repeat;
-  background-image: conic-gradient(from var(--angle), hsl(var(--primary) / 0.5), transparent 30%, transparent 70%, hsl(var(--primary) / 0.5));
+  background-image: conic-gradient(
+    from var(--angle),
+    hsl(var(--primary) / 0.5),
+    transparent 30%,
+    transparent 70%,
+    hsl(var(--primary) / 0.5)
+  );
   animation: rotate 6s linear infinite;
 }
 
 @property --angle {
-  syntax: '<angle>';
+  syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
 }

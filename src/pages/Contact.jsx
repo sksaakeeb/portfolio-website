@@ -1,6 +1,7 @@
 import PageWrapper from "@/components/PageWrapper";
 import AnimatedText from "@/components/AnimatedText";
 import { motion } from "framer-motion";
+
 import {
   Github,
   Linkedin,
@@ -42,8 +43,8 @@ const contactLinks = [
   {
     name: "LeetCode",
     icon: Code,
-    user: "SKSAAKEEB",
-    url: "https://leetcode.com/u/SKSAAKEEB",
+    user: "thesaakeeb",
+    url: "https://leetcode.com/u/thesaakeeb",
     color: "bg-[#f89f1b]",
   },
 ];
